@@ -62,6 +62,7 @@
   (define-key text-mode-map (kbd "TAB") 'self-insert-command))
 
 (exec-path-from-shell-initialize)
+(yas-global-mode)
 (key-chord-mode 1)
 
 (custom-set-variables
@@ -121,7 +122,7 @@
  '(ns-use-native-fullscreen nil)
  '(package-selected-packages
    (quote
-    (visual-regexp exec-path-from-shell flycheck ag wgrep-ag undo-tree company helm-projectile shackle projectile helm key-chord)))
+    (yasnippet yasnippet-snippets visual-regexp exec-path-from-shell flycheck ag wgrep-ag undo-tree company helm-projectile shackle projectile helm key-chord)))
  '(projectile-completion-system (quote helm))
  '(projectile-mode t nil (projectile))
  '(recentf-auto-cleanup (quote never))
