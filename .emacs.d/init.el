@@ -23,6 +23,8 @@
 (global-set-key (kbd "C-M-i") 'company-complete)
 
 (with-eval-after-load 'company
+  (define-key company-active-map (kbd "M-n") nil)
+  (define-key company-active-map (kbd "M-p") nil)
   (define-key company-active-map (kbd "C-n") 'company-select-next)
   (define-key company-active-map (kbd "C-p") 'company-select-previous)
   (define-key company-active-map (kbd "C-h") nil))
@@ -32,6 +34,10 @@
   (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
   (define-key helm-map (kbd "C-z") 'helm-select-action)
   (define-key helm-map (kbd "C-h") nil))
+
+(with-eval-after-load 'helm-files
+  (define-key helm-find-files-map (kbd "C-<backspace>") nil)
+  (define-key helm-read-file-map (kbd "C-<backspace>") nil))
 
 (with-eval-after-load 'isearch
   (define-key isearch-mode-map (kbd "C-o") 'helm-occur-from-isearch))
