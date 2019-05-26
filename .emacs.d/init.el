@@ -166,4 +166,5 @@
  '(company-tooltip-common ((t (:foreground "white" :background "#244f36"))))
  '(company-tooltip-common-selection ((t (:foreground "white" :background "#007771"))))
  '(company-tooltip-selection ((t (:foreground "#a1ffcd" :background "#007771"))))
- '(cursor ((t (:background "red1")))))
+ '(cursor ((t (:background "red1"))))
+ '(whitespace-empty ((t (:background "gray20" :foreground "firebrick")))))
