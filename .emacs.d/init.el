@@ -29,7 +29,9 @@
   (define-key company-active-map (kbd "M-p") nil)
   (define-key company-active-map (kbd "C-n") 'company-select-next)
   (define-key company-active-map (kbd "C-p") 'company-select-previous)
-  (define-key company-active-map (kbd "C-h") nil))
+  (define-key company-active-map (kbd "C-h") nil)
+  (define-key company-active-map (kbd "<tab>") 'company-complete-common-or-cycle)
+  (define-key company-active-map (kbd "M-d") 'company-show-doc-buffer))
 
 (with-eval-after-load 'helm
   (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
