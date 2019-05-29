@@ -65,9 +65,15 @@
 (with-eval-after-load 'text-mode
   (define-key text-mode-map (kbd "TAB") 'self-insert-command))
 
-(exec-path-from-shell-initialize)
-(yas-global-mode)
-(key-chord-mode 1)
+(add-hook 'after-init-hook
+          (lambda ()
+            (exec-path-from-shell-initialize)
+            (yas-global-mode)
+            (key-chord-mode 1)
+            (let ((dir (locate-user-emacs-file "local-lisp")))
+              (when (file-exists-p dir)
+                (dolist (file (directory-files dir t "\\.el\\'"))
+                  (load file))))))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
