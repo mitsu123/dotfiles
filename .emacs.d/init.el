@@ -66,6 +66,10 @@
                                   (interactive)
                                   (setq truncate-lines (not truncate-lines)))))
 
+(with-eval-after-load 'prog-mode
+  (add-hook 'prog-mode-hook 'highlight-symbol-mode)
+  (add-hook 'prog-mode-hook 'highlight-symbol-nav-mode))
+
 (with-eval-after-load 'text-mode
   (define-key text-mode-map (kbd "TAB") 'self-insert-command))
 
@@ -114,6 +118,7 @@
    (quote
     (helm-source-bookmarks helm-source-recentf helm-source-buffers-list helm-source-files-in-current-dir)))
  '(helm-mode t)
+ '(highlight-symbol-idle-delay 0.2)
  '(ibuffer-always-show-last-buffer :nomini)
  '(ibuffer-expert t)
  '(ibuffer-formats
@@ -136,7 +141,7 @@
  '(ns-use-native-fullscreen nil)
  '(package-selected-packages
    (quote
-    (helm-c-yasnippet helm-rg neotree yasnippet yasnippet-snippets visual-regexp exec-path-from-shell flycheck ag wgrep-ag undo-tree company helm-projectile shackle projectile helm key-chord)))
+    (highlight-symbol helm-c-yasnippet helm-rg neotree yasnippet yasnippet-snippets visual-regexp exec-path-from-shell flycheck ag wgrep-ag undo-tree company helm-projectile shackle projectile helm key-chord)))
  '(projectile-completion-system (quote helm))
  '(projectile-mode t nil (projectile))
  '(recentf-auto-cleanup (quote never))
