@@ -21,6 +21,8 @@
 (global-set-key (kbd "C-.") 'helm-find-files)
 (global-set-key (kbd "C-,") 'helm-buffers-list)
 (global-set-key (kbd "C-:") 'helm-rg)
+(global-set-key (kbd "C-c y") 'helm-yas-complete)
+(global-set-key (kbd "C-c i") 'helm-imenu)
 (global-set-key (kbd "C-M-i") 'company-complete)
 (global-set-key (kbd "<f8>") 'neotree-toggle)
 
@@ -132,7 +134,7 @@
  '(ns-use-native-fullscreen nil)
  '(package-selected-packages
    (quote
-    (helm-rg neotree yasnippet yasnippet-snippets visual-regexp exec-path-from-shell flycheck ag wgrep-ag undo-tree company helm-projectile shackle projectile helm key-chord)))
+    (helm-c-yasnippet helm-rg neotree yasnippet yasnippet-snippets visual-regexp exec-path-from-shell flycheck ag wgrep-ag undo-tree company helm-projectile shackle projectile helm key-chord)))
  '(projectile-completion-system (quote helm))
  '(projectile-mode t nil (projectile))
  '(recentf-auto-cleanup (quote never))
