@@ -49,6 +49,8 @@
   (define-key isearch-mode-map (kbd "C-o") 'helm-occur-from-isearch))
 
 (with-eval-after-load 'key-chord
+  (setq key-chord-two-keys-delay 0.05
+        key-chord-one-keys-delay 0.05)
   (key-chord-define-global "u8" 'dabbrev-expand)
   (key-chord-define-global "-=" 'flycheck-list-errors)
   (key-chord-define-global "q2" 'query-replace)
