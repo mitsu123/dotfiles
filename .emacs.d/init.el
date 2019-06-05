@@ -185,4 +185,5 @@
  '(company-tooltip-common-selection ((t (:foreground "white" :background "#007771"))))
  '(company-tooltip-selection ((t (:foreground "#a1ffcd" :background "#007771"))))
  '(cursor ((t (:background "red1"))))
- '(whitespace-empty ((t (:background "gray20" :foreground "firebrick")))))
+ '(whitespace-empty ((t (:background "gray20" :foreground "firebrick"))))
+ '(whitespace-tab ((t (:background "gray17" :foreground "gray18")))))
