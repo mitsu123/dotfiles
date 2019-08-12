@@ -136,6 +136,7 @@
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(make-backup-files nil)
+ '(neo-smart-open t)
  '(ns-pop-up-frames nil)
  '(ns-use-fullscreen-animation nil)
  '(ns-use-native-fullscreen nil)
