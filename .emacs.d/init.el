@@ -141,7 +141,7 @@
  '(ns-use-native-fullscreen nil)
  '(package-selected-packages
    (quote
-    (highlight-symbol helm-c-yasnippet helm-rg neotree yasnippet yasnippet-snippets visual-regexp exec-path-from-shell flycheck ag wgrep-ag undo-tree company helm-projectile shackle projectile helm key-chord)))
+    (telephone-line highlight-symbol helm-c-yasnippet helm-rg neotree yasnippet yasnippet-snippets visual-regexp exec-path-from-shell flycheck ag wgrep-ag undo-tree company helm-projectile shackle projectile helm key-chord)))
  '(projectile-completion-system (quote helm))
  '(projectile-mode t nil (projectile))
  '(recentf-auto-cleanup (quote never))
@@ -164,6 +164,7 @@
       (quote below)))))
  '(show-paren-mode t)
  '(tab-width 4)
+ '(telephone-line-mode t)
  '(tool-bar-mode nil)
  '(uniquify-buffer-name-style (quote reverse) nil (uniquify))
  '(use-dialog-box nil)
