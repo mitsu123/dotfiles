@@ -54,7 +54,7 @@
   (setq key-chord-two-keys-delay 0.05
         key-chord-one-keys-delay 0.05)
   (key-chord-define-global "u8" 'dabbrev-expand)
-  (key-chord-define-global "-=" 'flycheck-list-errors)
+  (key-chord-define-global "-=" 'helm-flycheck)
   (key-chord-define-global "q2" 'query-replace)
   (key-chord-define-global "q3" 'vr/query-replace)
   (key-chord-define-global "q4" 'align)
@@ -145,7 +145,7 @@
  '(ns-use-native-fullscreen nil)
  '(package-selected-packages
    (quote
-    (telephone-line highlight-symbol helm-c-yasnippet helm-rg neotree yasnippet yasnippet-snippets visual-regexp exec-path-from-shell flycheck ag wgrep-ag undo-tree company helm-projectile shackle projectile helm key-chord)))
+    (helm-flycheck telephone-line highlight-symbol helm-c-yasnippet helm-rg neotree yasnippet yasnippet-snippets visual-regexp exec-path-from-shell flycheck ag wgrep-ag undo-tree company helm-projectile shackle projectile helm key-chord)))
  '(projectile-completion-system (quote helm))
  '(projectile-mode t nil (projectile))
  '(recentf-auto-cleanup (quote never))
@@ -161,8 +161,6 @@
  '(shackle-rules
    (quote
     (("*Completions*" :align
-      (quote below))
-     ("*Flycheck errors*" :align
       (quote below))
      ("\\*helm" :regexp t :select t :align
       (quote below)))))
