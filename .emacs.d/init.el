@@ -81,6 +81,7 @@
             (server-start)
             (yas-global-mode)
             (key-chord-mode 1)
+            (windmove-default-keybindings 'super)
             (let ((dir (locate-user-emacs-file "local-lisp")))
               (when (file-exists-p dir)
                 (dolist (file (directory-files dir t "\\.el\\'"))
