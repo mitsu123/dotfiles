@@ -47,6 +47,10 @@
   (define-key helm-find-files-map (kbd "C-<backspace>") nil)
   (define-key helm-read-file-map (kbd "C-<backspace>") nil))
 
+(with-eval-after-load 'highlight-symbol
+  (define-key highlight-symbol-nav-mode-map (kbd "M-N") 'highlight-symbol-next-in-defun)
+  (define-key highlight-symbol-nav-mode-map (kbd "M-P") 'highlight-symbol-prev-in-defun))
+
 (with-eval-after-load 'isearch
   (define-key isearch-mode-map (kbd "C-o") 'helm-occur-from-isearch))
 
@@ -57,7 +61,8 @@
   (key-chord-define-global "-=" 'helm-flycheck)
   (key-chord-define-global "q2" 'query-replace)
   (key-chord-define-global "q3" 'vr/query-replace)
-  (key-chord-define-global "q4" 'align)
+  (key-chord-define-global "q4" 'highlight-symbol-query-replace)
+  (key-chord-define-global "q5" 'align)
   (key-chord-define-global "09" (lambda ()
                                   (interactive)
                                   (switch-to-buffer "*scratch*")))
