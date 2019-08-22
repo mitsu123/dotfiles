@@ -75,7 +75,8 @@
 
 (with-eval-after-load 'prog-mode
   (add-hook 'prog-mode-hook 'highlight-symbol-mode)
-  (add-hook 'prog-mode-hook 'highlight-symbol-nav-mode))
+  (add-hook 'prog-mode-hook 'highlight-symbol-nav-mode)
+  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
 
 (with-eval-after-load 'text-mode
   (define-key text-mode-map (kbd "TAB") 'self-insert-command))
@@ -151,7 +152,7 @@
  '(ns-use-native-fullscreen nil)
  '(package-selected-packages
    (quote
-    (helm-flycheck telephone-line highlight-symbol helm-c-yasnippet helm-rg neotree yasnippet yasnippet-snippets visual-regexp exec-path-from-shell flycheck ag wgrep-ag undo-tree company helm-projectile shackle projectile helm key-chord)))
+    (rainbow-delimiters helm-flycheck telephone-line highlight-symbol helm-c-yasnippet helm-rg neotree yasnippet yasnippet-snippets visual-regexp exec-path-from-shell flycheck ag wgrep-ag undo-tree company helm-projectile shackle projectile helm key-chord)))
  '(projectile-completion-system (quote helm))
  '(projectile-mode t nil (projectile))
  '(recentf-auto-cleanup (quote never))
