@@ -1,3 +1,7 @@
+;;; init.el --- -*-no-byte-compile: t; -*-
+;;; Commentary:
+;;; Code:
+
 (when load-file-name
   (setq user-emacs-directory (file-name-directory load-file-name)
         user-init-file (locate-user-emacs-file "init.el")))
@@ -121,6 +125,7 @@
  '(ediff-split-window-function (quote split-window-horizontally))
  '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(global-company-mode t)
+ '(global-flycheck-mode t)
  '(global-undo-tree-mode t)
  '(global-whitespace-mode t)
  '(helm-display-function (quote pop-to-buffer))
@@ -197,3 +202,5 @@
  '(cursor ((t (:background "red1"))))
  '(whitespace-empty ((t (:background "gray20" :foreground "firebrick"))))
  '(whitespace-tab ((t (:background "gray17" :foreground "gray18")))))
+
+;;; init.el ends here
