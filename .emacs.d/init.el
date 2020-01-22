@@ -101,6 +101,10 @@
                                   (interactive)
                                   (setq truncate-lines (not truncate-lines)))))
 
+(with-eval-after-load 'lsp-ui
+  (define-key lsp-ui-mode-map (kbd "M-.") 'lsp-ui-peek-find-definitions)
+  (define-key lsp-ui-mode-map (kbd "M-?") 'lsp-ui-peek-find-references))
+
 (with-eval-after-load 'prog-mode
   (add-hook 'prog-mode-hook 'highlight-symbol-mode)
   (add-hook 'prog-mode-hook 'highlight-symbol-nav-mode)
@@ -174,6 +178,8 @@
            " " filename))))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
+ '(lsp-ui-doc-alignment (quote window))
+ '(lsp-ui-doc-position (quote bottom))
  '(make-backup-files nil)
  '(neo-smart-open t)
  '(ns-pop-up-frames nil)
@@ -181,7 +187,7 @@
  '(ns-use-native-fullscreen nil)
  '(package-selected-packages
    (quote
-    (hydra multiple-cursors rainbow-delimiters helm-flycheck telephone-line highlight-symbol helm-c-yasnippet helm-rg neotree yasnippet yasnippet-snippets visual-regexp exec-path-from-shell flycheck ag wgrep-ag undo-tree company helm-projectile shackle projectile helm key-chord)))
+    (lsp-ui company-lsp lsp-mode hydra multiple-cursors rainbow-delimiters helm-flycheck telephone-line highlight-symbol helm-c-yasnippet helm-rg neotree yasnippet yasnippet-snippets visual-regexp exec-path-from-shell flycheck ag wgrep-ag undo-tree company helm-projectile shackle projectile helm key-chord)))
  '(projectile-completion-system (quote helm))
  '(projectile-mode t nil (projectile))
  '(recentf-auto-cleanup (quote never))
