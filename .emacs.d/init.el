@@ -31,6 +31,30 @@
 (global-set-key (kbd "C-c i") 'helm-imenu)
 (global-set-key (kbd "C-M-i") 'company-complete)
 (global-set-key (kbd "<f8>") 'neotree-toggle)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+(defhydra hydra-zoom (global-map "<f2>")
+  "zoom"
+  ("g" text-scale-increase "in")
+  ("l" text-scale-decrease "out"))
+
+(defhydra hydra-zoom (global-map "C-c")
+  "multiple-cursors"
+  ("C-n" mc/mark-next-like-this)
+  ("C-p" mc/mark-previous-like-this)
+  ("C-m" mc/mark-more-like-this-extended)
+  ("C-u" mc/unmark-next-like-this)
+  ("C-S-u" mc/unmark-previous-like-this)
+  ("C-S-n" mc/skip-to-next-like-this)
+  ("C-S-p" mc/skip-to-previous-like-this)
+  ("C-a" mc/mark-all-like-this)
+  ("C-S-a" mc/mark-all-like-this-dwim)
+  ("C-i" mc/insert-numbers)
+  ("C-o" mc/sort-regions)
+  ("C-S-o" mc/reverse-regions))
 
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "M-n") nil)
@@ -157,7 +181,7 @@
  '(ns-use-native-fullscreen nil)
  '(package-selected-packages
    (quote
-    (rainbow-delimiters helm-flycheck telephone-line highlight-symbol helm-c-yasnippet helm-rg neotree yasnippet yasnippet-snippets visual-regexp exec-path-from-shell flycheck ag wgrep-ag undo-tree company helm-projectile shackle projectile helm key-chord)))
+    (hydra multiple-cursors rainbow-delimiters helm-flycheck telephone-line highlight-symbol helm-c-yasnippet helm-rg neotree yasnippet yasnippet-snippets visual-regexp exec-path-from-shell flycheck ag wgrep-ag undo-tree company helm-projectile shackle projectile helm key-chord)))
  '(projectile-completion-system (quote helm))
  '(projectile-mode t nil (projectile))
  '(recentf-auto-cleanup (quote never))
