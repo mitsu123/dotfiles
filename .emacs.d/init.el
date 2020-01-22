@@ -7,7 +7,7 @@
         user-init-file (locate-user-emacs-file "init.el")))
 
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
 (set-language-environment "Japanese")
