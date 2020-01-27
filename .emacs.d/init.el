@@ -35,13 +35,14 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-S-<mouse-1>") 'mc/add-cursor-on-click)
 
 (defhydra hydra-zoom (global-map "<f2>")
   "zoom"
   ("g" text-scale-increase "in")
   ("l" text-scale-decrease "out"))
 
-(defhydra hydra-zoom (global-map "C-c")
+(defhydra hydra-mc (global-map "C-c")
   "multiple-cursors"
   ("C-n" mc/mark-next-like-this)
   ("C-p" mc/mark-previous-like-this)
