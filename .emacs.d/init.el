@@ -92,6 +92,7 @@
   (key-chord-define-global "q3" 'vr/query-replace)
   (key-chord-define-global "q4" 'highlight-symbol-query-replace)
   (key-chord-define-global "q5" 'align)
+  (key-chord-define-global "i9" 'string-inflection-all-cycle)
   (key-chord-define-global "09" (lambda ()
                                   (interactive)
                                   (switch-to-buffer "*scratch*")))
@@ -188,7 +189,7 @@
  '(ns-use-native-fullscreen nil)
  '(package-selected-packages
    (quote
-    (lsp-ui company-lsp lsp-mode hydra multiple-cursors rainbow-delimiters helm-flycheck telephone-line highlight-symbol helm-c-yasnippet helm-rg neotree yasnippet yasnippet-snippets visual-regexp exec-path-from-shell flycheck ag wgrep-ag undo-tree company helm-projectile shackle projectile helm key-chord)))
+    (string-inflection lsp-ui company-lsp lsp-mode hydra multiple-cursors rainbow-delimiters helm-flycheck telephone-line highlight-symbol helm-c-yasnippet helm-rg neotree yasnippet yasnippet-snippets visual-regexp exec-path-from-shell flycheck ag wgrep-ag undo-tree company helm-projectile shackle projectile helm key-chord)))
  '(projectile-completion-system (quote helm))
  '(projectile-mode t nil (projectile))
  '(recentf-auto-cleanup (quote never))
