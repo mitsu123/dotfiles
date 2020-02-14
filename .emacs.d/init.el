@@ -183,6 +183,7 @@
            " " filename))))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
+ '(lsp-prefer-flymake nil)
  '(lsp-ui-doc-alignment (quote window))
  '(lsp-ui-doc-position (quote bottom))
  '(make-backup-files nil)
